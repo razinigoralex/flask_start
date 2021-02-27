@@ -64,7 +64,7 @@ def mars_colonisation(name):
                       </figcaption>
                      </figure>
                      <div class="alert alert-primary" role="alert">
-                      {'</br>'.join(promote_list)}
+                      {promotion()}
                      </div>
                     </body>
                    </html>'''
