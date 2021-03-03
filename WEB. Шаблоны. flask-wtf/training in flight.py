@@ -8,6 +8,10 @@ def mars_colonisation(name):
     @app.route('/index')
     def main_screen():
         return render_template('base.html', title='Заготовка')
+    
+    @app.route('/training/<prof>')
+    def show_training(prof):
+        return render_template('training.html', prof=prof)
 
     return app
 
