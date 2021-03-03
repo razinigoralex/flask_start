@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Список профессий:</h2>
+{% set profession_list = ['инженер-исследователь', 'пилот', 'строитель', 'экзобиолог', 'врач',
+'инженер по терраформированию', 'климатолог', 'пилот дронов'] %}
+{% if list == 'ol' %}
+    <ol>
+    {% for prof in profession_list %}
+        <li>{{ prof }}</li>
+    {% endfor %}
+    </ol>
+{% elif list == 'ul' %}
+    <ul>
+    {% for prof in profession_list %}
+        <li>{{ prof }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Неверный параметр</p>
+{% endif %}
+{% endblock %}
